@@ -3,7 +3,7 @@ describe('Bubble Sort', function () {
     expect(bubbleSort([])).toEqual([]);
   });
 
-  it('ordena array desordenado', function () {
+  it('ordena array desordenado}', function () {
     spyOn(window, 'swap').and.callThrough();
     expect(bubbleSort([5, 4, 2, 1, 3])).toEqual([1, 2, 3, 4, 5]);
     expect(window.swap.calls.count()).toEqual(8);
