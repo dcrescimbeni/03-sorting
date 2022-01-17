@@ -1,18 +1,23 @@
 describe('Bubble Sort', function () {
-  xit('handles an empty array', function () {
+  it('handles an empty array', function () {
     expect(bubbleSort([])).toEqual([]);
   });
 
-  xit('ordena array desordenado', function () {
+  it('ordena array desordenado', function () {
+    spyOn(window, 'swap').and.callThrough();
     expect(bubbleSort([5, 4, 2, 1, 3])).toEqual([1, 2, 3, 4, 5]);
+    expect(window.swap.calls.count()).toEqual(8);
   });
 
-  xit('ordena array desordenado', function () {
+  it('ordena array desordenado', function () {
+    spyOn(window, 'swap').and.callThrough();
     expect(bubbleSort([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
   });
 
-  xit('ordena array desordenado', function () {
+  it('ordena array desordenado', function () {
+    spyOn(window, 'swap').and.callThrough();
     expect(bubbleSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
+    expect(window.swap.calls.count()).toEqual(10);
   });
 
   it('ordena dos objetos ', function () {
